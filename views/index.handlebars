@@ -1,33 +1,119 @@
 <div id="home">
   <div class="container">
+    <div class = "mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      {{!-- </li><a href="/addrecipe">Add a Recipe!!</a> --}}
+      <a class="navbar-brand" href="#">Navbar</a>
+      {{!-- <li class="nav-item active">
+            <a class="nav-link" href="/addrecipe">Add Recipe!<span class="sr-only">(current)</span></a>
+        </li> --}}
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/addrecipe">Add Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/recipes" 
+              aria-haspopup="true" aria-expanded="false">
+              Recipes
+            </a>
+            {{!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div> --}}
+          </li>
+          {{!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li> --}}
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        {{!-- <form>
+            <div class="form-group">
+              <label for="recipeInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form> --}}
+      </div>
+    </nav>
+    </div>
+
+
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
+        {{!-- <h1>{{msg}}</h1> --}}
+        <h2>Welcome to Recipe Tree!</h2>
         <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
+
+          {{!-- <div class="form-group">
             <label for="example-text">Example Text</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
+          </div> --}}
+
+          {{!-- <div class="form-group">
             <label for="example-description">Example Description</label>
             <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+          </div> --}}
+
+        </form>
+        <h3>Recipes:</h3>
+        {{!-- <ul id="recipe-list" class="list-group">
+          {{#each recipes}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="recipe/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul> --}}
+      </div>
+    </div>
+     <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="e-text">Recipe</label>
+            <input type="text" id="recipe-text" class="form-control" aria-describedby="recipe-text" placeholder="Enter recipe Text">
+          </div>
+          <div class="form-group">
+            <label for="recipe-description">Recipe Description</label>
+            <textarea class="form-control" id="recipe-description" aria-describedby="recipe-description" placeholder="Enter recipe Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
+        <h3>recipes:</h3>
+        <ul id="recipe-list" class="list-group">
+          {{#each recipes}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="recipe/{{this.id}}">{{this.text}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
         </ul>
-      </div>
-    </div>
   </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+
+
