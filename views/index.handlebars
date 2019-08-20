@@ -90,7 +90,7 @@
         </ul> --}}
       </div>
     </div>
-     <form class="clearfix mb-4" action="POST">
+     {{!-- <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="e-text">Recipe</label>
             <input type="text" id="recipe-text" class="form-control" aria-describedby="recipe-text" placeholder="Enter recipe Text">
@@ -100,12 +100,13 @@
             <textarea class="form-control" id="recipe-description" aria-describedby="recipe-description" placeholder="Enter recipe Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
+        </form> --}}
         <h3>recipes:</h3>
         <ul id="recipe-list" class="list-group">
           {{#each recipes}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="recipe/{{this.id}}">{{this.text}}</a>
+            <img src ="{{this.picture}}">
+            <a href="recipe/{{this.id}}">{{this.name}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}

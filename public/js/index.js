@@ -1,8 +1,14 @@
 // Get references to page elements
-var $recipeText = $("#recipe-text");
-var $recipeDescription = $("#recipe-description");
-var $submitBtn = $("#submit");
+var $recipeName = $("#recipe-name");
+var $recipePicture = $("#recipe-picture");
+var $recipeTypeOf = $("#recipe-typeof");
+var $recipeIngredients = $("#recipe-ingredients");
+var $recipeInstructions = $("#recipe-instructions");
+var $recipeComments = $("#recipe-comments");
+var $price = $("#recipe-price")
+var $submit = $("#submit");
 var $recipeList = $("#recipe-list");
+console.log("hello")
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -12,7 +18,7 @@ var API = {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/recipes",
+      url: "/api/recipes",
       data: JSON.stringify(recipe)
     });
   },
@@ -35,7 +41,7 @@ var refreshRecipes = function() {
   API.getRecipes().then(function(data) {
     var $recipes = data.map(function(recipe) {
       var $a = $("<a>")
-        .text(recipe.text)
+        .text(recipe.name)
         .attr("href", "/recipe/" + recipe.id);
 
       var $li = $("<li>")
@@ -65,11 +71,16 @@ var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var recipe = {
-    text: $recipeText.val().trim(),
-    description: $recipeDescription.val().trim()
+    name: $recipeName.val().trim(),
+    // picture: $recipePicture.val().trim(),
+    typeOf: $recipeTypeOf.val().trim(),
+    price: $price.val().trim(),
+    ingredients: $recipeIngredients.val().trim(),
+    instructions: $recipeInstructions.val().trim(),
+    comments: $recipeComments.val().trim(),
   };
 
-  if (!(recipe.text && recipe.description)) {
+  if (!(recipe.name && recipe.ingredients)) {
     alert("You must enter an recipe text and description!");
     return;
   }
@@ -78,8 +89,13 @@ var handleFormSubmit = function(event) {
     refreshRecipes();
   });
 
-  $recipeText.val("");
-  $recipeDescription.val("");
+  $recipeName.val("");
+  $recipePicture.val("");
+  $recipeTypeOf.val("");
+  $price.val("");
+  $recipeIngredients.val("");
+  $recipeInstructions.val("");
+  $recipeComments.val("");
 };
 
 // handleDeleteBtnClick is called when an recipe's delete button is clicked
@@ -95,5 +111,8 @@ var handleDeleteBtnClick = function() {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
+$submit.on("click", handleFormSubmit);
+$submit.on("click", function() {
+  console.log("clicked")
+});
 $recipeList.on("click", ".delete", handleDeleteBtnClick);
