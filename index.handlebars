@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+  <div class="container">
+
+    <div id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 offset-2">
+            <h1 style="font-size:50px;""text-align:center;">Welcome to Recipe Tree</h1>
+            <h3 style="text-align:center;">Let's get cooking!</h3>
+            <form class="clearfix mb-4" action="POST">
+
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                  <small id="emailHelp" class="form-text">We'll never share your email with anyone
+                    else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+
+              <hr class="mt-2 mb-5">
+
+              <div class="row text-center text-lg-left">
+
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail"
+                      src="https://res.cloudinary.com/dyoydnu0a/image/upload/v1566163507/victoria-shes-Qa29U4Crvn4-unsplash_put5rb.jpg"
+                      alt="">
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail"
+                      src="https://res.cloudinary.com/dyoydnu0a/image/upload/c_scale,h_3872/v1566163507/orlova-maria-2RJc3Sdt7Tc-unsplash_zrfcly.jpg"
+                      alt="">
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail"
+                      src="https://res.cloudinary.com/dyoydnu0a/image/upload/c_scale,h_3872/v1566163506/kamil-kalbarczyk-19Ft3QfakMo-unsplash_mmr8f5.jpg"
+                      alt="">
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail"
+                      src="https://res.cloudinary.com/dyoydnu0a/image/upload/v1566163506/liubov-ilchuk-_qZOwG2oaj4-unsplash_bmxzrg.jpg"
+                      alt="">
+                  </a>
+                </div>
+</body>
+
+
+
+
+
+
+
+
+<ul id="example-list" class="list-group">
+  {{#each examples}}
+  <li data-id="{{this.id}}" class="list-group-item">
+    <a href="example/{{this.id}}">{{this.text}}</a>
+    <button class="btn btn-danger float-right delete">ｘ</button>
+  </li>
+  {{/each}}
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+</html>
