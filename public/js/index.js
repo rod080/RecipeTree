@@ -72,7 +72,7 @@ var handleFormSubmit = function(event) {
 
   var recipe = {
     name: $recipeName.val().trim(),
-    // picture: $recipePicture.val().trim(),
+    picture: $picURL,
     typeOf: $recipeTypeOf.val().trim(),
     price: $price.val().trim(),
     ingredients: $recipeIngredients.val().trim(),

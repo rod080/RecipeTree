@@ -17,19 +17,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/addrecipe">Add recipe</a>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
@@ -46,16 +33,7 @@
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title">lets add a recipe!</h5>
-          {{!-- <p>
-            <strong>ID</strong>: {{example.id}}</p>
-          <p>
-          <p>
-            <strong>Text</strong>: {{example.text}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
-            <a href="/">← Back To Home</a> --}}
-
+          <h5 class="card-title">Lets add a recipe!</h5>
           <div class="form-group">
             <label for="example-text">Dish Name</label>
             <input type="text" id="recipe-name" class="form-control" aria-describedby="example-text"
@@ -81,13 +59,13 @@
             <div class="form-group">
               <label for="example-description">Ingredients</label>
               <textarea class="form-control" id="recipe-ingredients" aria-describedby="example-description"
-                placeholder="Ingredients go here! Include measurements!"></textarea>
+                placeholder="Ingredients go here! Include measurements and Seperate with Commas!" rows="3"></textarea>
             </div>
 
             <div class="form-group">
               <label for="example-description">Instructions</label>
-              <textarea class="form-control" id="recipe-instructions" aria-describedby="example-description"
-                placeholder="Instructions go here! Explain as if the user is 5! "></textarea>
+              <textarea class="form-control" id="recipe-instructions" aria-describedby="example-description" rows="3"
+                placeholder="Instructions go here! Seperate Instructions with Periods please. "></textarea>
             </div>
 
             <div class="form-group">
@@ -120,25 +98,15 @@
                 uploadPreset: 'ixrfqkcb'
               }, (error, result) => {
                 if (!error && result && result.event === "success") {
-                  console.log('Done! Here is the image info: ', result.info);
+                  //console.log('Done! Here is the image info: ', result.info);//
+                  $picURL = result.info.thumbnail_url;
                 }
-              }
-              )
+              });
               document.getElementById("upload_widget").addEventListener("click", function () {
                 myWidget.open();
               }, false);
             </script>
-
             <button id="submit" class="btn btn-primary float-right">Submit</button>
-            {{!-- </form>
-            <h3>Examples:</h3>
-            <ul id="example-list" class="list-group">
-              {{#each examples}}
-              <li data-id="{{this.id}}" class="list-group-item">
-                <a href="example/{{this.id}}">{{this.text}}</a>
-                <button class="btn btn-danger float-right delete">ｘ</button>
-              </li>
-              {{/each}} --}}
           </div>
         </div>
       </div>
