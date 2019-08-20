@@ -13,6 +13,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.main-box{
+  background-color: white;
+}
 
 /* Color Theme Swatches in Hex */
 /* .fruits-unsplash-1-hex { color: #FD5F34; }

@@ -24,9 +24,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // price:{
-    // type: DataTypes.INTEGER,
-    // },
+    price:{
+    type: DataTypes.INTEGER,
+    },
 
     typeOf: {
       type: DataTypes.STRING,

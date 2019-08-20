@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
   // Load recipe page and pass in an recipe by id
   app.get("/recipes/:id", function(req, res) {
-    db.Recipe.findOne({ where: { id: req.params.id } }).then(function(dbrecipes) {
+    db.Recipe.findOne({ where: {id: req.params.id} }).then(function(dbrecipes) {
       res.render("recipes", {
         recipes: dbrecipes
       });
