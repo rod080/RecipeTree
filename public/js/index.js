@@ -8,6 +8,8 @@ var $recipeComments = $("#recipe-comments");
 var $price = $("#recipe-price")
 var $submit = $("#submit");
 var $recipeList = $("#recipe-list");
+// var $picURL = result.info.thumbnail_url
+ 
 console.log("hello")
 
 // The API object contains methods for each kind of request we'll make

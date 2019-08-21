@@ -5,16 +5,31 @@
         <div class="card-body">
           <h5 class="card-title"></h5>
         
-          <h1> <strong>: {{recipes.name}}</strong></h1>
-          
-          <p>
-            <strong>Text</strong>: {{recipes.text}}</p>
-          <p>
-            <strong>Description:</strong> {{recipes.description}}</p>
-            <a href="/">← Back To Home</a>
+          <h1><strong>{{recipes.name}}</strong></h1>
+          <img class="display-pic"{{recipes.picture}}>
+
+          <div class="row">
+            <span class="col-lg-2">Type: {{recipes.typeOf}}</span>
+            <span class="col-lg-2">Price: {{recipes.price}}</span>
+            <span class="col-lg-6">Created on: {{recipes.createdAt}}</span>
+          </div>
+
+          <div class="col-lg-12">Ingredients: {{recipes.ingredients}}</div>
+          <br><br>
+
+          <div class="col-lg-12">Instructions: {{recipes.instructions}}</div>
+          <br><br>
+
+          <div class="col-lg-12">Comments: {{recipes.comments}}</div>
+
+          <strong>Description:</strong> {{recipes.description}}
+          <a href="/">← Back To Home</a>
+
         </div>
       </div>
     </div>
   </div>
 </div>
-
+<script> var ingredientsArray={{recipes.ingredients}}
+  console.log (ingredientsArray)
+</script>
