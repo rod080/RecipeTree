@@ -1,28 +1,32 @@
 <div class="container">
   <div class="row">
     <div class="col-8 offset-2">
-      <div class="card mt-4">
+      <div class="card mt-4 mb-4">
         <div class="card-body">
           <h5 class="card-title"></h5>
         
-          <h1><strong>{{recipes.name}}</strong></h1>
-          <img class="display-pic"{{recipes.picture}}>
+          <h1 class="text-center"><strong>{{recipes.name}}</strong></h1>
 
-          <div class="row">
-            <span class="col-lg-2">Type: {{recipes.typeOf}}</span>
-            <span class="col-lg-2">Price: {{recipes.price}}</span>
-            <span class="col-lg-6">Created on: {{recipes.createdAt}}</span>
+          <img class="display-pic text-center" src="{{recipes.picture}}" width="400" height="300">
+          <div class = "row">
+          <div class="col-lg-12"><strong>Type:</strong> {{recipes.typeOf}}</div>
+
+          <div class="col-lg-12"><strong>Price:</strong> {{recipes.price}}</div>
           </div>
 
-          <div class="col-lg-12">Ingredients: {{recipes.ingredients}}</div>
+          <div class="col-lg-12"><strong>Added:</strong> {{recipes.createdAt}}</div>
           <br><br>
 
-          <div class="col-lg-12">Instructions: {{recipes.instructions}}</div>
-          <br><br>
+          <div class="col-lg-12"><strong>Ingredients: </strong><br>
+            {{recipes.ingredients}}
+          </div>
+          <br>
 
-          <div class="col-lg-12">Comments: {{recipes.comments}}</div>
+          <div class="col-lg-12"><strong>Instructions:</strong> {{recipes.instructions}}</div>
+          <br>
 
-          <strong>Description:</strong> {{recipes.description}}
+          <div class="col-lg-12"><strong>Comments:</strong> {{recipes.comments}}</div>
+
           <a href="/">← Back To Home</a>
 
         </div>
@@ -30,6 +34,4 @@
     </div>
   </div>
 </div>
-<script> var ingredientsArray={{recipes.ingredients}}
-  console.log (ingredientsArray)
-</script>
+<script src="../public/js/recipes.js"></script> 

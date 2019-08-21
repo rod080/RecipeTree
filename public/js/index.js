@@ -8,7 +8,7 @@ var $recipeComments = $("#recipe-comments");
 var $price = $("#recipe-price")
 var $submit = $("#submit");
 var $recipeList = $("#recipe-list");
-// var $picURL = result.info.thumbnail_url
+
  
 console.log("hello")
 
@@ -118,3 +118,20 @@ $submit.on("click", function() {
   console.log("clicked")
 });
 $recipeList.on("click", ".delete", handleDeleteBtnClick);
+
+// ol id="books">
+// </ol>​
+
+// // This looks much nicer a separate call for each array member
+// var books = [
+//    "Fifty Shades of Grey",
+//    "Twilight",
+//    "The Notebook"
+// ];
+
+// var html = "";
+// for (var i =0; i < books.length; i++) {
+//     html += "<li>" + books[i]+ "</li>";
+// }
+// document.getElementById("books").innerHTML = html;​
+

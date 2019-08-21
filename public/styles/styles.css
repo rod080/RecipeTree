@@ -1,9 +1,27 @@
 /* Home */
+.recipe-grid{
+  padding-left: 10%;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.gallery-container {
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 auto;
+}
+
 div.gallery {
-  margin: 5px;
+  margin: 15px;
   border: 1px solid #ccc;
   float: left;
   width: 180px;
+  background-color: #fff;
+  padding: 0;
 }
 div.gallery:hover {
   border: 1px solid #777;
@@ -24,19 +42,31 @@ div.gallery img {
   
   text-decoration: none;
 }
-
+/* .recipe-grid{
+  background-color:white;
+} */
 
 
 body {
   /* color:white; */
-  background-image: url("../img/food-unsplash.jpg");
+  background-image: url("../img/wood-background.jpg");
   height: 50%; 
+  
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.7);
+  background-repeat: repeat-y;
 }
 .main-box{
   background-color: white;
+}
+
+/* Nav */
+/* .transparent {
+  background: transparent;
+} */
+.navbar {
+  border-bottom: 1px solid #ccc;
 }
 
 /* Color Theme Swatches in Hex */
