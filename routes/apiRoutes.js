@@ -24,15 +24,24 @@ module.exports = function(app) {
 };
 
 
-app.post("/api/todos", function(req, res) {
-  // create takes an argument of an object describing the item we want to
-  // insert into our table. In this case we just we pass in an object with a text
-  // and complete property
-  db.Todo.create({
-    text: req.body.text,
-    complete: req.body.complete
-  }).then(function(dbTodo) {
-    // We have access to the new todo as an argument inside of the callback function
-    res.json(dbTodo);
-  });
-});
+// app.post("/api/todos", function(req, res) {
+//   // create takes an argument of an object describing the item we want to
+//   // insert into our table. In this case we just we pass in an object with a text
+//   // and complete property
+//   db.Todo.create({
+//     text: req.body.text,
+//     complete: req.body.complete
+//   }).then(function(dbTodo) {
+//     // We have access to the new todo as an argument inside of the callback function
+//     res.json(dbTodo);
+//   });
+// });
+
+// app.get("/api/recipes/:id", function (req, res) {
+//   db.Recipe.findAll({ 
+//      where : {id:req.params.id },
+//      ingredients:req.body.ingredients,
+//    }).then(function(dbRecipe){
+//      res.json(dbRecipe)
+//  });
+//   })

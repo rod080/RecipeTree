@@ -38,6 +38,7 @@ var API = {
   }
 };
 
+
 // refreshrecipes gets new recipes from the db and repopulates the list
 var refreshRecipes = function() {
   API.getRecipes().then(function(data) {
@@ -116,8 +117,13 @@ var handleDeleteBtnClick = function() {
 $submit.on("click", handleFormSubmit);
 $submit.on("click", function() {
   console.log("clicked")
+  location.href = "/";
+
 });
 $recipeList.on("click", ".delete", handleDeleteBtnClick);
+
+
+
 
 // ol id="books">
 // </ol>​
@@ -134,4 +140,5 @@ $recipeList.on("click", ".delete", handleDeleteBtnClick);
 //     html += "<li>" + books[i]+ "</li>";
 // }
 // document.getElementById("books").innerHTML = html;​
+
 

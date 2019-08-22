@@ -7,15 +7,16 @@
         
           <h1 class="text-center"><strong>{{recipes.name}}</strong></h1>
 
-          <img class="display-pic text-center" src="{{recipes.picture}}" width="400" height="300">
-          <div class = "row">
-          <div class="col-lg-12"><strong>Type:</strong> {{recipes.typeOf}}</div>
-
-          <div class="col-lg-12"><strong>Price:</strong> {{recipes.price}}</div>
+          <div class="text-center">
+            <img class="display-pic text-center mt-4 mb-4" src="{{recipes.picture}}" width="400" height="auto">
           </div>
 
+          <div class="col-lg-12"><strong>Type:</strong> {{recipes.typeOf}}</div>
+
+          <div class="col-lg-12"><strong>Price:</strong> {{recipes.price}}/5</div>
+
           <div class="col-lg-12"><strong>Added:</strong> {{recipes.createdAt}}</div>
-          <br><br>
+          <br>
 
           <div class="col-lg-12"><strong>Ingredients: </strong><br>
             {{recipes.ingredients}}
@@ -26,8 +27,9 @@
           <br>
 
           <div class="col-lg-12"><strong>Comments:</strong> {{recipes.comments}}</div>
+          <br>
 
-          <a href="/">← Back To Home</a>
+          <a class="float-right mr-4" href="/">← Back To Home</a>
 
         </div>
       </div>
