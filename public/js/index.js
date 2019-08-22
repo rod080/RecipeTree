@@ -8,6 +8,8 @@ var $recipeComments = $("#recipe-comments");
 var $price = $("#recipe-price")
 var $submit = $("#submit");
 var $recipeList = $("#recipe-list");
+
+ 
 console.log("hello")
 
 // The API object contains methods for each kind of request we'll make
@@ -35,6 +37,7 @@ var API = {
     });
   }
 };
+
 
 // refreshrecipes gets new recipes from the db and repopulates the list
 var refreshRecipes = function() {
@@ -114,5 +117,28 @@ var handleDeleteBtnClick = function() {
 $submit.on("click", handleFormSubmit);
 $submit.on("click", function() {
   console.log("clicked")
+  location.href = "/";
+
 });
 $recipeList.on("click", ".delete", handleDeleteBtnClick);
+
+
+
+
+// ol id="books">
+// </ol>​
+
+// // This looks much nicer a separate call for each array member
+// var books = [
+//    "Fifty Shades of Grey",
+//    "Twilight",
+//    "The Notebook"
+// ];
+
+// var html = "";
+// for (var i =0; i < books.length; i++) {
+//     html += "<li>" + books[i]+ "</li>";
+// }
+// document.getElementById("books").innerHTML = html;​
+
+

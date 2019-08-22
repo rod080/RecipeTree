@@ -38,5 +38,6 @@ Object.keys(db).forEach(function(modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+// app.use(express.static('../public/img/')); 
 
 module.exports = db;

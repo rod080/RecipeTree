@@ -1,20 +1,39 @@
 <div class="container">
   <div class="row">
     <div class="col-8 offset-2">
-      <div class="card mt-4">
+      <div class="card mt-4 mb-4">
         <div class="card-body">
           <h5 class="card-title"></h5>
         
-          <h1> <strong>: {{recipes.name}}</strong></h1>
-          
-          <p>
-            <strong>Text</strong>: {{recipes.text}}</p>
-          <p>
-            <strong>Description:</strong> {{recipes.description}}</p>
-            <a href="/">← Back To Home</a>
+          <h1 class="text-center"><strong>{{recipes.name}}</strong></h1>
+
+          <div class="text-center">
+            <img class="display-pic text-center mt-4 mb-4" src="{{recipes.picture}}" width="400" height="auto">
+          </div>
+
+          <div class="col-lg-12"><strong>Type:</strong> {{recipes.typeOf}}</div>
+
+          <div class="col-lg-12"><strong>Price:</strong> {{recipes.price}}/5</div>
+
+          <div class="col-lg-12"><strong>Added:</strong> {{recipes.createdAt}}</div>
+          <br>
+
+          <div class="col-lg-12"><strong>Ingredients: </strong><br>
+            {{recipes.ingredients}}
+          </div>
+          <br>
+
+          <div class="col-lg-12"><strong>Instructions:</strong> {{recipes.instructions}}</div>
+          <br>
+
+          <div class="col-lg-12"><strong>Comments:</strong> {{recipes.comments}}</div>
+          <br>
+
+          <a class="float-right mr-4" href="/">← Back To Home</a>
+
         </div>
       </div>
     </div>
   </div>
 </div>
-
+<script src="../public/js/recipes.js"></script> 
