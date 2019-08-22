@@ -1,18 +1,7 @@
-// module.exports = function(sequelize, DataTypes) {
-//   var Recipes = sequelize.define("Recipes", {
-//     text: DataTypes.STRING,
-//     description: DataTypes.TEXT
-//   });
-//   var Users = sequelize.define("Users", {
-//     userName: DataTypes.STRING,
-//     password: DataTypes.STRING
-//   });
-//   return Recipes;
-// };
+
 
 module.exports = function(sequelize, DataTypes) {
   var Recipe = sequelize.define("Recipe", {
- 
     name: {
       type: DataTypes.STRING,
       allowNull: false,
