@@ -32,18 +32,18 @@
         <!-- Text Overlay -->
         <div class="card-img-overlay title" style="margin-top: 150px;">
           <h1 class="card-title white-text" style="font-size:50px;text-align:center;">Welcome to RecipeTree</h1>
-          <h3 class="card-text white-text" style="text-align:center;">Let's get cooking!</h3>
+          <h3 class="card-text white-text" style="text-align:center;">Let's Get Cooking!</h3>
         </div>
 
         <div class="card-body card-bg">
-
-          <form class="clearfix mb-4" action="POST">
+{{!-- 
+          <form class="clearfix mb-4" action="POST"> --}}
 
           <div id="recipe-list" class="list-group">
             <div class="row gallery-row text-center">
                 {{#each recipes}}
 
-                  <div class="gallery col-md-3 col-6">
+                  <div class="gallery col-md-3 col-6" data-id="{{this.id}}">
                     <a href="recipes/{{this.id}}">
                       <img class="img-responsive" src="{{this.picture}}" onerror="this.onerror=null; this.src='../public/img/food-tree.jpg'" alt="recipe-image" width="600" height="400">
                     </a>
