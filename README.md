@@ -1,38 +1,64 @@
-# Project Starter
+# RecipeTree
 
-In this activity we will add the provided boilerplate to group project repos.
+<h5>
+This application is a suer friendly virtual cookbook that allows culinary professionals to log all their recipes in a single app. Allows easy access to the recipes via User friendly interface. Access to recipes from the community. 
+</h5>
 
-## Instructions
+## Starting the app locally
 
-* Only one member of each group should complete this activity while the others watch.
+Start by cloning into the repo using this link: 
 
-* Copy the entire [Unsolved](Unsolved) folder to another location on your computers &mdash; wherever you would like your local copy of the group project to be.
+Then begin installing front and backend dependencies. While in this directory, run the following command:
 
-* Rename the copied "Unsolved" folder to the name of your project.
+```
+npm install
+```
 
-* Open the copied project folder's `package.json` file and change its `name` property to the name of your project.
+This should install node modules within the server and the client folder.
 
-* CD to the root of the copied project folder with your terminal and run the following commands:
+After both installations complete, run the following command in your terminal:
 
-  ```
-  git init
-  git add .
-  git commit -m "Initial commit"
-  ```
+```
+node ____
+```
 
-* Then copy the GitHub repo's remote SSH URL (the same URL you'd use to clone the repo).
+Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
-* Run the following commands in your terminal, replacing <remote-url> with your GitHub repo's remote SSH URL.
+## Deployment (Heroku)
 
-  ```
-  git remote add origin <remote-url>
-  git push origin master
-  ```
+# Visit the app @ https://recipe-tree-rdsg.herokuapp.com/
 
-* If completed successfully you should see all of the files uploaded to GitHub.
+<h3> Using KonnectD </h3>
 
-* All other group members should now clone the repo.
+When first landing on the site you will be able to see the recipes the community has uploaded. Ehen you click on a recipe thhe instuctions are dynamically displayed to teh user. 
 
-* Discuss as a group:
+<h2>Technology</h2>
+This page was built with the following NPM Modules, and technologies:
 
-  * How would you now add changes to this project?
+
+
+
+* [Sequalize](https://www.npmjs.com/package/sequelize)
+
+* [BootStrap](https://getbootstrap.com/)
+
+* [Css](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+* [Git Bash](https://gitforwindows.org/)
+
+* [Heroku](https://id.heroku.com/login)
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+For comments/ concerns contact the project 
+Authors: Rodrigo Villarreal, Sean Kish, Jonathan Wells,and Caitlin O'Connor  
+At: konnectd123@gmail.com
+
+
+
+
+
+
+
