@@ -1,7 +1,7 @@
 # RecipeTree
 
 <h5>
-This application is a user friendly virtual cookbook that allows culinary professionals to log all their recipes in a single app. Allows easy access to the community recipes via User friendly interface.
+This application is a user friendly virtual cookbook that allows culinary professionals to log all their recipes in a single app. Allows easy access to the community recipes via user friendly interface.
 </h5>
 
 ## Starting the app locally
@@ -28,7 +28,7 @@ Your app should now be running on <http://localhost:3000>. The Express server sh
 
 # Visit the app @ https://recipe-tree-rdsg.herokuapp.com/
 
-<h3> Using RecipTree</h3>
+<h3> Using RecipeTree</h3>
 
 When first landing on the site you will be able to see the recipes the community has uploaded. Ehen you click on a recipe thhe instuctions are dynamically displayed to teh user. 
 
