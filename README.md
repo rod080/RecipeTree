@@ -30,7 +30,7 @@ Your app should now be running on <http://localhost:3000>. The Express server sh
 
 <h3> Using RecipeTree</h3>
 
-When first landing on the site you will be able to see the recipes the community has uploaded. Ehen you click on a recipe thhe instuctions are dynamically displayed to teh user. 
+When first landing on the site you will be able to see the recipes the community has uploaded. When you click on a recipe thhe recipe instructions are dynamically displayed to the user. 
 
 <h2>Technology</h2>
 This page was built with the following NPM Modules, and technologies:
